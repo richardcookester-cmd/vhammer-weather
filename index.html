@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Cell Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid">
+
+    <!-- LEFT PANEL -->
+    <div class="panel left">
+
+      <div class="card">
+        <h2>Conditions</h2>
+        <div id="conditions">
+          Loading...
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Forecast</h2>
+        <div id="forecast">
+          Loading...
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Alerts</h2>
+        <div id="alerts">
+          Loading...
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN RADAR -->
+    <div class="panel main">
+
+      <div class="card radar">
+        <h2>KAKQ Radar (Williamsburg, VA)</h2>
+        <iframe
+          src="https://radar.weather.gov/station/KAKQ/standard"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Last updated: <span id="updated">--</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
