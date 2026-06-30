@@ -1,4 +1,4 @@
-# Home Cell Weather
+# My Home Cell Weather project
 
 Control-center style weather dashboard for Williamsburg, VA (23188).
 
@@ -8,6 +8,7 @@ Control-center style weather dashboard for Williamsburg, VA (23188).
 - 3-day forecast
 - Active alerts
 - Auto-refresh every 5 minutes
+- LCARS type colors
 
 ## Deployment
 Enable GitHub Pages:
