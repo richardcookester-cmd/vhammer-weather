@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: calc(100vh - 30px);
+}
+
+.panel {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.card {
+  background: #1a1f2a;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #7dd3fc;
+}
+
+.radar iframe {
+  height: 75vh;
+  border-radius: 8px;
+}
+
+.footer {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0d12;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radar iframe {
+    height: 50vh;
+  }
+}
