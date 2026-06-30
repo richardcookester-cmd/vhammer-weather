@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Radar HUD</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+iframe {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  filter: contrast(1.05) saturate(1.2);
+}
+
+/* HUD overlays */
+.corner {
+  position: absolute;
+  color: #8ad3ff;
+  font-family: Arial;
+  font-size: 11px;
+  padding: 6px 8px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(138,211,255,0.3);
+}
+
+.tl { top: 10px; left: 10px; }
+.tr { top: 10px; right: 10px; }
+.bl { bottom: 10px; left: 10px; }
+.br { bottom: 10px; right: 10px; }
+</style>
+</head>
+
+<body>
+
+<iframe src="https://radar.weather.gov/station/KAKQ/standard"></iframe>
+
+<div class="corner tl">KAKQ RADAR</div>
+<div class="corner tr">LIVE</div>
+<div class="corner bl">WILLIAMSBURG, VA</div>
+<div class="corner br" id="time"></div>
+
+<script>
+function updateTime() {
+  document.getElementById("time").textContent =
+    new Date().toLocaleTimeString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>
