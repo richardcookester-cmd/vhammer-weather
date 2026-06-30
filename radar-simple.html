@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Radar Only</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: #7dd3fc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+iframe {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">KAKQ Radar – Williamsburg, VA</div>
+
+<iframe
+  src="https://radar.weather.gov/station/KAKQ/standard"
+></iframe>
+
+</body>
+</html>
