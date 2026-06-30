@@ -1,10 +1,24 @@
+:root {
+  --lcars-bg: #0b0b10;
+
+  --lcars-orange: #ff6753;
+  --lcars-amber: #ffcc66;
+  --lcars-peach: #ffb38a;
+  --lcars-purple: #cc99ff;
+  --lcars-cyan: #8ad3ff;
+
+  --lcars-text: #ffe6cc;
+  --lcars-muted: #c9b8a8;
+
+  --panel: #1a1a24;
+}
 html, body {
   height: 100%;
   margin: 0;
   overflow: hidden; /* KEY FIX */
   font-family: Arial, sans-serif;
-  background: #0f1115;
-  color: #e6e6e6;
+  background: var(--lcars-bg);
+  color: var(--lcars-text);
 }
 
 .grid {
@@ -21,6 +35,16 @@ html, body {
 /* LEFT SIDE CAN SCROLL IN CARDS ONLY */
 .left {
   overflow-y: auto;
+}
+
+/* LCARS CARDS */
+.card {
+  background: linear-gradient(135deg, #1a1a24, #12121a);
+  border-left: 8px solid var(--lcars-orange);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
 }
 
 /* RADAR CARD MUST FILL HEIGHT */
