@@ -14,7 +14,10 @@ async function loadWeather() {
     const stationRes = await fetch(currentObsUrl);
     const stationData = await stationRes.json();
 
-    const station = stationData.features[0].id;
+    const stations = stationData.features;
+    if (!stations || stations.length === 0) throw new Error("No stations found");
+
+    const stationId = stations[0].properties.stationIdentifier;
 
     const obsRes = await fetch(`https://api.weather.gov/stations/${station}/observations/latest`);
     const obsData = await obsRes.json();
@@ -27,7 +30,7 @@ async function loadWeather() {
 
   } catch (err) {
     console.error(err);
-    document.getElementById("conditions").innerText = "Failed to load weather data.";
+    document.getElementById("conditions").innerText = "⚠️ Weather data temporarily unavailable";
   }
 }
 
