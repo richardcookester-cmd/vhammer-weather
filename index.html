@@ -39,11 +39,20 @@
     <div class="panel main">
 
       <div class="card radar">
+        <div style="width:780px; height:990px; overflow:hidden; position:relative;">
         <h2>KAKQ Radar (Williamsburg, VA)</h2>
         <iframe
           src="https://radar.weather.gov/station/KAKQ/standard"
-          allowfullscreen>
+          style="
+            position:absolute;
+            top:-120px;   /* adjust this */
+            left:-10px;   /* adjust this */
+            width:1200px; /* bigger than container */
+            height:1200px;
+            border:0;
+          ">
         </iframe>
+        </div>
       </div>
 
     </div>
